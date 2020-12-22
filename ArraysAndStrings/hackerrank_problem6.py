@@ -52,19 +52,30 @@ def repeatedString(s, n):
     if length == 1 and s[0] == 'a':
         return n
 
-    for i in range(length):
-        if s[i] == 'a':
-            cnt += 1
+    print("cnt => ", int(cnt))
 
     if length >= n:
+        for i in s[:n]:
+            if i == 'a':
+                cnt += 1
         return cnt
     else:
-        m = math.ceil(n / length)
+        m = math.floor(n / length)
+        print("m => {}".format(m))
+
         c = n % length
+
+        for i in range(length):
+            if s[i] == 'a':
+                cnt += 1
+
+        cnt = (cnt * m)
+
+
         for i in s[:int(c)]:
             if i == 'a':
                 cnt += 1
-        cnt += m * c
+
     return cnt
 
 
