@@ -5,7 +5,6 @@ class TreeNode:
         self.left = left
         self.right = right
 
-
 class Solution:
     def maxDepth(self, root: TreeNode) -> int:
         if root is None:
@@ -21,16 +20,3 @@ class Solution:
             return lDepth + 1
         else:
             return rDepth + 1
-
-
-if __name__ == '__main__':
-    root = TreeNode(val=1)
-    root.left = TreeNode(val=2)
-    root.right = TreeNode(val=3)
-    root.left.left = TreeNode(val=7)
-    root.left.right = TreeNode(val=6)
-    root.right.left = TreeNode(val=5)
-    root.right.right = TreeNode(val=4)
-    sol = Solution()
-    result = sol.maxDepth(root)
-    print(result)

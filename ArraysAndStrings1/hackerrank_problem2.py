@@ -27,22 +27,18 @@ Sample Output
 """
 
 
-def count_substring(st, sub_string):
+def count_substring(string, sub_string):
     cnt = 0
     len_sub_str = len(sub_string)
-    print(len(st))
-    print(len_sub_str)
-    print(len(st) - len_sub_str+1)
-    for i in range(0, len(st) - len_sub_str+1):
-        if sub_string == st[i:len_sub_str+i]:
+    for i in range(0, len(string) - len_sub_str+1):
+        if sub_string == string[i:len_sub_str+i]:
             cnt += 1
     return cnt
 
 
 if __name__ == '__main__':
-    # string = input().strip()
-    # sub_string = input().strip()
-    string = "ABCDCDC"
-    sub_string = "CDC"
+    string = input().strip()
+    sub_string = input().strip()
+
     count = count_substring(string, sub_string)
     print(count)

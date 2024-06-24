@@ -44,7 +44,7 @@ if __name__ == '__main__':
     obj = Solution()
     # arr = [2, 7, 8, 17]
     # target = 9
-    arr = [1,3,2,2,7,8,5,4,0]
+    arr = [1,3,2,2]
     target = 4
     # print(obj.twoSum(arr, target))
     obj.pair_sum(arr,target)

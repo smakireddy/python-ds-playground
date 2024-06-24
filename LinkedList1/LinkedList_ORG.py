@@ -3,7 +3,6 @@ class Node:
         self.data = data
         self.next = next
 
-
 class LinkedList:
     def __init__(self):
         self.head = None
@@ -23,7 +22,7 @@ class LinkedList:
         count = 0
         itr = self.head
         while itr:
-            count += 1
+            count+=1
             itr = itr.next
 
         return count
@@ -45,10 +44,10 @@ class LinkedList:
         itr.next = Node(data, None)
 
     def insert_at(self, index, data):
-        if index < 0 or index > self.get_length():
+        if index<0 or index>self.get_length():
             raise Exception("Invalid Index")
 
-        if index == 0:
+        if index==0:
             self.insert_at_begining(data)
             return
 
@@ -64,10 +63,10 @@ class LinkedList:
             count += 1
 
     def remove_at(self, index):
-        if index < 0 or index >= self.get_length():
+        if index<0 or index>=self.get_length():
             raise Exception("Invalid Index")
 
-        if index == 0:
+        if index==0:
             self.head = self.head.next
             return
 
@@ -79,7 +78,7 @@ class LinkedList:
                 break
 
             itr = itr.next
-            count += 1
+            count+=1
 
     def insert_values(self, data_list):
         self.head = None
@@ -89,11 +88,11 @@ class LinkedList:
 
 if __name__ == '__main__':
     ll = LinkedList()
-    ll.insert_values(["banana", "mango", "grapes", "orange"])
-    ll.insert_at(1, "blueberry")
+    ll.insert_values(["banana","mango","grapes","orange"])
+    ll.insert_at(1,"blueberry")
     ll.remove_at(2)
     ll.print()
 
-    ll.insert_values([45, 7, 12, 567, 99])
+    ll.insert_values([45,7,12,567,99])
     ll.insert_at_end(67)
     ll.print()

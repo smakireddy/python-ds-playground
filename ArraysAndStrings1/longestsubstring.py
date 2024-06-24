@@ -57,21 +57,8 @@ class Solution:
 
         return max_length
 
-    def length_of_longest_substring(self, s:str) -> int:
-        seen = {}
-        max_len = start = 0
-        for i in range(len(s)):
-            if s[i] in seen and start <= seen[s[i]]:
-                start = seen[s[i]]+1
-            else:
-                max_len = max(max_len, i - start + 1)
-            seen[s[i]] = i
-
-        return max_len
-
 
 if __name__ == '__main__':
     obj = Solution()
     s = "abcabcbb"
     print(obj.lengthOfLongestSubstring(s))
-    print(obj.length_of_longest_substring(s))
