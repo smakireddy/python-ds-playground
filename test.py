@@ -1,33 +1,15 @@
+import unittest
 
-# write function to see pallendrom
-# s = "racecar"
 
-# input[::-1]
-#
-def solution (input:str):
-    result = [] # ['r','a','
-    for i in reversed(range(len(input))):
-        result.append(input[i])
+def add(x, y):
+    return x + y
 
-    if input == "".join[i for i in result]:
-        return True
-    else:
-        return False
 
-def solution1(input:str):
-    mid = len(input)//2
-    first = input[:mid]
-    second = input[mid+1:]
-    reverse_second = reversed(second)
-    if first == rever_second:
-        return True
-    else:
-        return False
+class TestSkewness(unittest.TestCase):
+    def test_sample(self):
+        result = add(10, 5)
+        self.assertEqual(result, 15)
+
 
 if __name__ == '__main__':
-    s = "racecar"
-    print(solution(s))
-
-
-
-
+    unittest.main()
